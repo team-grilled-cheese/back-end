@@ -27,6 +27,7 @@ const requireToken = passport.authenticate('bearer', { session: false })
 // instantiate a router (mini app that only handles routes)
 const router = express.Router()
 
+// Create route
 router.post('/surveys', requireToken, (req, res, next) => {
   req.body.survey.owner = req.user.id
 
@@ -34,6 +35,16 @@ router.post('/surveys', requireToken, (req, res, next) => {
     .then(survey => {
       res.status(201).json({ survey: survey.toObject() })
     })
+    .catch(next)
+})
+
+// Index route
+router.get('/surveys', (req, res, next) => {
+  Survey.find()
+    .then(surveys => {
+      return surveys.map(survey => survey.toObject())
+    })
+    .then(surveys => res.status(200).json({ surveys: surveys }))
     .catch(next)
 })
 
