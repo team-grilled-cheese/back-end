@@ -1,4 +1,13 @@
 const mongoose = require('mongoose')
+// const answerSchema = require('./answer')
+
+const answerSchema = new mongoose.Schema({
+  answer: {
+    type: Number,
+    enum: [1, 2, 3, 4],
+    required: true
+  }
+})
 
 const surveySchema = new mongoose.Schema({
   title: {
@@ -14,12 +23,9 @@ const surveySchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
-  answer: {
-    type: Number,
-    enum: [1, 2, 3],
-    required: true
-  }
-}, {
+  answer: [ answerSchema ]
+},
+{
   timestamps: true
 })
 
