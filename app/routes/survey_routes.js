@@ -48,4 +48,40 @@ router.get('/surveys', (req, res, next) => {
     .catch(next)
 })
 
+// Show route
+router.get('/surveys/:id', (req, res, next) => {
+  Survey.findById(req.params.id)
+    .then(handle404)
+    .then(survey => res.status(200).json({ survey: survey.toObject() }))
+    .catch(next)
+})
+
+// Update route
+router.patch('/surveys/:id', requireToken, removeBlanks, (req, res, next) => {
+  delete req.body.survey.owner
+
+  Survey.findById(req.params.id)
+    .then(handle404)
+    .then(survey => {
+      requireOwnership(req, survey)
+
+      return survey.updateOne(req.body.survey)
+    })
+    .then(() => res.sendStatus(204))
+    .catch(next)
+})
+
+// DELETE
+router.delete('/surveys/:id', requireToken, (req, res, next) => {
+  Survey.findById(req.params.id)
+    .then(handle404)
+    .then(survey => {
+      requireOwnership(req, survey)
+      survey.deleteOne()
+    })
+
+    .then(() => res.sendStatus(204))
+    .catch(next)
+})
+
 module.exports = router
