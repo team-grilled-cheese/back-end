@@ -23,7 +23,7 @@ const surveySchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
-  answer: [ answerSchema ]
+  response: [ answerSchema ]
 },
 {
   timestamps: true
