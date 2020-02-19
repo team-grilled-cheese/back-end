@@ -36,7 +36,9 @@ router.post('/answers/:surveyid', requireToken, (req, res, next) => {
     .then(answer => {
       res.status(201).json({ answer: answer.toObject() })
     })
-    .then()
+    // .then(Survey.response.push({ answer: req.answer }))
+    // .then(Survey.findOneAndUpdate({id: req.params.surveyid},
+    //  {$push: {answer: req.answer}}))
     .catch(next)
 })
 
@@ -48,6 +50,13 @@ router.get('/answers', (req, res, next) => {
     })
     .then(answers => res.status(200).json({ answers: answers }))
     .catch(next)
+})
+
+// Get answers for a specific survey
+router.get('/answers/', (req, res, next) => {
+  Answer.find({ surveyRef: req.body.surveyRef })
+    .then(handle404)
+    .then(answer => res.status(200).json({ answer: answer.toObject() }))
 })
 
 module.exports = router
