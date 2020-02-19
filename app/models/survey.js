@@ -3,10 +3,6 @@ const Answer = require('./answer')
 const answerSchema = Answer.schema
 
 const surveySchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true
-  },
   question: {
     type: String,
     required: true
