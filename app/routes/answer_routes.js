@@ -40,4 +40,14 @@ router.post('/answers/:surveyid', requireToken, (req, res, next) => {
     .catch(next)
 })
 
+// INDEX all answers
+router.get('/answers', (req, res, next) => {
+  Answer.find()
+    .then(answers => {
+      return answers.map(answer => answer.toObject())
+    })
+    .then(answers => res.status(200).json({ answers: answers }))
+    .catch(next)
+})
+
 module.exports = router
