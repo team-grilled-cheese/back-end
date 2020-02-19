@@ -1,13 +1,6 @@
 const mongoose = require('mongoose')
-// const answerSchema = require('./answer')
-
-const answerSchema = new mongoose.Schema({
-  answer: {
-    type: Number,
-    enum: [1, 2, 3, 4],
-    required: true
-  }
-})
+const Answer = require('./answer')
+const answerSchema = Answer.schema
 
 const surveySchema = new mongoose.Schema({
   title: {
