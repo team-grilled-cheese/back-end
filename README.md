@@ -1,26 +1,27 @@
-# Application Title: Survey
+# Survey:
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I wanted to do this project, or
-came up with this idea.
+This application allows the user to create a survey and then answer other user's surveys.
 
 ## Important Links
 
-- [Other Repo](www.link.com)
+- [Other Repo](https://github.com/team-grilled-cheese/back-end)
 - [Deployed API](www.link.com)
 - [Deployed Client](www.link.com)
 
 ## Planning Story
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ornare magna. Curabitur leo arcu, elementum in posuere vitae, rutrum eu urna. Quisque tincidunt nulla sed mi cursus, nec tristique est fermentum. Etiam lacinia id neque ut egestas. Sed consequat convallis felis nec posuere. Sed non eros sed velit viverra tincidunt. Etiam et tortor sit amet lacus volutpat dignissim. Vestibulum convallis, felis a posuere pretium, turpis enim sollicitudin neque, pretium finibus leo metus sed sapien. Praesent iaculis pharetra nunc ac rhoncus. Duis eu risus in est porttitor egestas sit amet eget metus. Maecenas iaculis auctor ullamcorper. Donec pretium dolor non nisl egestas bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper pulvinar orci interdum mattis. Ut gravida volutpat mauris, a semper risus maximus ut.
 
 ### User Stories
 
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
+- As an unregistered user, I would like to sign up with email and password.
+- As a registered user, I would like to sign in with email and password.
+- As a signed in user, I would like to change password.
+- As a signed in user, I would like to sign out.
+- As a signed in user, I would like to create a survey with a title and possible answers.
+- As a signed in user, I would like to update my survey's title and possible answers of a survey.
+- As a signed in user, I would like to delete my survey.
+- As a signed in user, I would like to see all surveys and its answers.
+- As a signed in user, I would like to take a survey.
 
 ### Technologies Used
 
@@ -28,6 +29,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ornare magna
 - HTML/CSS
 - Bootstrap
 - Javascript
+- SASS
+- Handlebars
+- AJAX
+- Node.js
 
 ### Unsolved Problems
 
@@ -39,4 +44,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ornare magna
 ---
 
 #### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
+![wireframe](https://i.imgur.com/RZVxwRI.jpg)
