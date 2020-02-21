@@ -48,9 +48,17 @@ As a group we decided that mob going and pair programming would be the best way 
 - We would like to display our answers in a chart for users to see what the most popular answers were for a particular survey
 - We would like to add a toggle function to our show all survey button that shows all surveys on first click and then hides them when you click again
 
+
+--- 
+
 ## Images
 
----
 
 #### Wireframe:
 ![wireframe](https://i.imgur.com/RZVxwRI.jpg)
+
+#### ERD
+![ERD](https://i.imgur.com/OxPanCq.jpg)
+
+### Routes Catalog
+![route catalog](https://i.imgur.com/sHUgHcH.png)
