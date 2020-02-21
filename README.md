@@ -5,8 +5,8 @@ This application allows the user to create a survey and then answer other user's
 ## Important Links
 
 - [Other Repo](https://github.com/team-grilled-cheese/back-end)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+- [Deployed API](https://git.heroku.com/blooming-meadow-93930.git)
+- [Deployed Client](https://team-grilled-cheese.github.io/front-end/)
 
 ## Planning Story
 
